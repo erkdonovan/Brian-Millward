@@ -1,0 +1,410 @@
+/*
+Theme Name: Brian Millword Site
+Theme URI: 
+Author: Erika Donovan
+Author URI: https://erikadonovan.com
+Version: 1.0
+*/
+
+@import "_reset";
+@import "_variables";
+@import "_mixins";
+@import "_normalize";
+@import "_grid";
+
+
+.clearfix {
+  display: inline-block;
+}
+
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+body {
+  color: #000;
+  font-size: 16px;
+  font-family: 'Play', sans-serif;
+}
+
+/* clear */
+.clear:before,
+.clear:after {
+  content: ' ';
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+h1 {
+  font-family: $headerfont;
+  font-size: 48px;
+  text-transform: capitalize;
+  padding: 10px 0 0;
+  margin: 10px 0 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: $headerfont;
+
+}
+
+h3 {
+  font-size: 18px;
+  margin: 5px;
+  font-family: $thirdfont;
+}
+
+i {
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: $firstcol;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $secondcol;
+}
+
+input:focus {
+  outline: 0;
+  border: 1px solid #04A4CC;
+}
+
+
+ul {
+  margin: 0 0 15px;
+}
+
+/*------------------------------------*\
+    HOME
+\*------------------------------------*/
+
+.hero-image, .inner-image {
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.home-open-text {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 40%;
+
+  h1 {
+    color: $firstcol;
+  }
+
+  h2 {
+    color: $secondcol;
+    font-size: 25px;
+  }
+}
+
+.home-zoology {
+  float: left;
+}
+
+.home-comedy {
+  float: right;
+}
+
+.home-zoology, .home-comedy {
+  width: 50%;
+  padding: 20px;
+
+  h3 {
+    color: $secondcol;
+    text-align: center;
+  }
+}
+
+.inner-image {
+  float: left;
+  width: 50%;
+}
+
+.inner-text {
+  float: right;
+  width: 50%;
+  margin-top: 30px;
+    ul {
+    padding: 5px;
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+.gallery {
+  ul {
+
+    display: flex;
+
+    li {
+      margin: 5px;
+    }
+  }
+}
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+/* wrapper */
+.innerWrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* nav */
+
+.nav {
+  text-align: center;
+  background: $secondcol;
+  width: 100%;
+  @include nopadormar;
+  z-index: 9999;
+  position: relative;
+
+  ul {
+    list-style-type: none;
+    @include nopadormar;
+    li {
+      display: inline-block;
+      padding: 20px 10px;
+      a {
+        padding: 20px 10px;
+        text-decoration: none;
+        &:hover {
+          background: $thirdcol;
+          color: $secondcol;
+        }
+      }
+    }
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #fff;
+  border: none;
+  text-transform: uppercase;  
+  padding: 5px 8px;
+  z-index: 999;
+}
+
+/* section */
+
+.no-sidebar section {
+  width: 100%;
+}
+
+.article {
+  width: 100%;
+}
+
+/* sidebar */
+.sidebar {
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  background: $firstcol;
+  padding: 10px;
+
+  p {
+    margin: 0;
+  }
+  a {
+    color: white;
+  }
+}
+
+// CONTACT
+
+.form {
+  margin: 0 auto;
+  margin-top: 100px;
+  h2 {    
+    text-align: center;
+  }
+  form {
+    max-width: 410px;
+    margin: auto;
+  }
+}
+
+input,textarea {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+  font-size: 14px;
+  width: 400px;
+  border: $firstcol 2px solid;
+  background: #fff;
+}
+
+input[type=submit] {
+  background: #fff;
+  width: 100px;
+  box-shadow: 0;
+  display: inline;
+}
+
+input#s {
+  width: 100%;
+}
+
+.social {
+  text-align: center;
+  padding: 15px;
+  ul {
+    list-style-type: none;
+    @include nopadormar;
+
+    li {
+      display: inline-block;
+      margin: 0 0 20px;
+
+      a {
+        color: black;
+        padding: 15px;
+        &:hover {
+          color: $secondcol;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+//  MISC
+
+::selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #FFF;
+  border: 1px solid #F0F0F0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption .wp-caption-text,
+.gallery-caption {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+@import "_media";

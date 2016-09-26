@@ -1,0 +1,70 @@
+OrderLabelNameType
+1
+Hero Image
+home_hero_image Image
+2
+Opening Lines
+home_opening_lines Text Area
+3
+Zoo Image
+home_zoo_image Image
+4
+Zoo Text
+home_zoo_text Text Area
+5
+Comedy Image
+home_comedy_image Image
+6
+Comedy Text
+home_comedy_text Text Area
+
+
+OrderLabelNameType
+1
+Hero Image
+comedy_hero_image Image
+2
+Bio
+comedy_bio Text Area
+3
+Articles
+comedy_articles Repeater
+	1
+	Title *
+	comedy_articles_title Text
+	2
+	URL *
+	comedy_articles_url Url
+	3
+	Date
+	comedy_articles_date Date Picker
+4
+Events
+comedy_events Repeater
+
+
+OrderLabelNameType
+1
+Hero Image *
+zoology_hero_image Image
+2
+Bio *
+zoology_bio Text Area
+3
+Articles
+zoology_articles Repeater
+	OrderLabelNameType
+	1
+	Title *
+	zoology_articles_title Text
+	2
+	URL *
+	zoology_articles_url Url
+	3
+	Date
+	zoology_articles_date Date Picker
+4
+Gallery
+zoology_gallery Gallery
+
+
