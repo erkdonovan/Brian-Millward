@@ -1,5 +1,5 @@
 /*
-Theme Name: Brian Millword Site
+Theme Name: Brian Millward Site
 Theme URI: 
 Author: Erika Donovan
 Author URI: https://erikadonovan.com
@@ -433,7 +433,6 @@ i {
 }
 
 img {
-  max-width: 100%;
   vertical-align: bottom;
 }
 
@@ -518,12 +517,12 @@ ul {
   list-style-type: none;
 }
 
-.gallery ul {
-  display: flex;
-}
-
 .gallery ul li {
   margin: 5px;
+}
+
+.gallery img {
+  height: 200px;
 }
 
 /*------------------------------------*    STRUCTURE

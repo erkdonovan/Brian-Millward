@@ -58,12 +58,10 @@
 $images = get_field('zoology_gallery');
 
 if( $images ): ?>
-    <ul>
+    <ul class="carousel"  data-flickity='{ "wrapAround": true, "pageDots": false, "imagesLoaded": true, "percentPosition": false }'>
         <?php foreach( $images as $image ): ?>
-            <li>
-                <a href="<?php echo $image['url']; ?>">
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </a>
+            <li class="carousel-cell">
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
             </li>
         <?php endforeach; ?>
     </ul>

@@ -14,7 +14,9 @@
   <link rel="stylesheet" type="text/css"  href="<?php echo get_template_directory_uri(); ?>/style.css" />
 
     <!-- FAV ICON -->
-  <link type="image/png" href="<?php echo get_site_url();?>/wp-content/themes/danstheme/img/favicon.png" rel="icon">
+  <!-- <link type="image/png" href="<?php echo get_site_url();?>/wp-content/themes/danstheme/img/favicon.png" rel="icon"> -->
+
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css" media="screen">
 
   <link href='https://fonts.googleapis.com/css?family=Lato|Oswald|Ubuntu' rel='stylesheet' type='text/css'>
   

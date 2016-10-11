@@ -3,18 +3,7 @@
 <?php get_header(); ?>
 
 <div class="inner-image left" style="background-image: url('<?php the_field('comedy_hero_image'); ?>');">
-<!-- <div class="w3-content w3-display-container">
-  <img class="mySlides" src="img_nature.jpg">
-  <img class="mySlides" src="img_fjords.jpg">
-  <img class="mySlides" src="img_mountains.jpg">
-  <div class="w3-center w3-display-bottomleft" style="width:100%">
-    <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-  </div>
-</div> -->
+
 </div>
 
 <div class="inner-text right">
@@ -136,16 +125,13 @@
 <div class="gallery">
       <h2>Gallery</h2>
   <?php 
-
 $images = get_field('comedy_gallery');
 
 if( $images ): ?>
-    <ul>
+    <ul class="carousel"  data-flickity='{ "wrapAround": true, "pageDots": false, "imagesLoaded": true, "percentPosition": false }'>
         <?php foreach( $images as $image ): ?>
-            <li>
-                <a href="<?php echo $image['url']; ?>">
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </a>
+            <li class="carousel-cell">
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
             </li>
         <?php endforeach; ?>
     </ul>
